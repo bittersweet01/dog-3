@@ -1,0 +1,111 @@
+.dog{
+  position: relative;
+  margin: 5px;
+}
+
+.dog .head{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background: #F3BB75;
+}
+
+/* ear */
+.dog .head:before,
+.dog .head:after{
+  position: absolute;
+  top: -10px;
+  content: "";
+  display: inline-block;
+  border: 30px solid transparent;
+  border-top: 40px solid #D1985D;
+}
+
+.dog .head:before{
+  left: 10px;
+  transform: rotate(-200deg);
+  border-radius: 100% 50% 0 0;
+}
+
+.dog .head:after{
+  right: 10px;
+  transform: rotate(200deg);
+  border-radius: 50% 100% 0 0;
+}
+
+.dog .eyes{
+  position: absolute;
+  top: 40%;
+  width: 100%;
+}
+
+/* eye */
+.dog .eyes:before,
+.dog .eyes:after{
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: #000;
+  border-radius: 100%;
+  box-shadow: 0 0 0 2px #fff inset,
+
+}
+
+.dog .eyes:before{
+  left: 40px;
+}
+
+.dog .eyes:after{
+  right: 40px;
+}
+
+.dog .muzzle{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100px;
+  height: 70px;
+  border-radius: 100%;
+  background: #827161;
+  transform: translateX(-50%);
+}
+
+.dog .muzzle .nose{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 35px;
+  height: 25px;
+  border-radius: 70% 70% 100% 100%;
+  background: #000;
+  transform: translate(-50%,-50%);
+}
+
+.dog .mouth{
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+}
+
+/* mouth-parts */
+.dog .mouth:before,
+.dog .mouth:after{
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 15px;
+  border-bottom: 4px solid #000;
+  border-radius: 100%;
+}
+
+.dog .mouth:before{
+  left: -2px;
+}
+
+.dog .mouth:after{
+  right: -2px;
+}
